@@ -42,7 +42,7 @@ const corsOptions = allowedOrigins.length
     };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 // capture raw body for better JSON error reporting
 app.use(json({
   limit: "50mb",
