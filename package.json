@@ -22,6 +22,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.76.1",
     "axios": "^1.12.2",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "fluent-ffmpeg": "^2.1.3",
