@@ -23,7 +23,11 @@ const app = express();
 app.use(morgan("dev"));
 
 // CORS: allow configured origins and handle preflight early
-const allowedOrigins = (process.env.CORS_ORIGINS || "").split(",").map(s => s.trim()).filter(Boolean);
+const allowedOrigins = [
+  "https://nashvin-nidu.github.io",
+  "https://nashvin-nidu.github.io/",
+  ...(process.env.CORS_ORIGINS || "").split(",").map(s => s.trim()).filter(Boolean)
+];
 const corsOptions = allowedOrigins.length
   ? {
       origin: (origin, callback) => {
